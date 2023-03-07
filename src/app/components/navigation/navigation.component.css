@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  color: #363636;
+  background-color: #fcfcfc;
+  padding: 10px 20px;
+}
+ul {
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  font-weight: 600;
+  font-size: 16px;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 120px;
+  height: 25px;
+  background-image: url("../../../assets/img/logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.right a {
+  color: #f94147;
+  font-size: 18px;
+  border-right: 1px solid #c6c6c6;
+  padding: 0 10px;
+}
+.right span {
+  color: #363636;
+  font-weight: 600;
+  padding: 0 10px;
+}
