@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  constructor() {}
+  activedRoute: string = '';
+  constructor(private activeRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activedRoute = this.activeRoute.pathFromRoot[1].snapshot.url[1].path;
+    console.log(this.activedRoute);
+  }
 }

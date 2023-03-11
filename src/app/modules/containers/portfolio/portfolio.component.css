@@ -1,0 +1,8 @@
+.container {
+  height: 92vh;
+  width: 100%;
+  background-image: url("../../../../assets/img/portfolio-bg.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
