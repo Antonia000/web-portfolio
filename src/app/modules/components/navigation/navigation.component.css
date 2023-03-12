@@ -3,9 +3,11 @@
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   color: #363636;
   background-color: #fcfcfc;
-  padding: 10px 20px;
 }
 ul {
   margin: 0;

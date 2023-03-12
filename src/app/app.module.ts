@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoffeeShopModule } from './modules/components/coffee-shop/coffee-shop.module';
 import { NavigationModule } from './modules/components/navigation/navigation.module';
 import { HomepageModule } from './modules/containers/homepage/homepage.module';
 import { PortfolioModule } from './modules/containers/portfolio/portfolio.module';
+import { ContactModule } from './modules/containers/contact/contact.module';
+import { RouterService } from './services/router.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,8 +16,9 @@ import { PortfolioModule } from './modules/containers/portfolio/portfolio.module
     HomepageModule,
     NavigationModule,
     PortfolioModule,
+    ContactModule,
   ],
-  providers: [],
+  providers: [RouterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

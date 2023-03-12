@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  padding: 5px 0;
+  width: 100%;
+  background-color: #fcfcfc;
+  color: #cccccc;
+}
+.container span {
+  margin: 0 7px;
+  font-size: 12px;
+}

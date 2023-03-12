@@ -2,10 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-coffee-shop',
-  templateUrl: './coffee-shop.component.html',
-  styleUrls: ['./coffee-shop.component.css'],
+  templateUrl: './portfolio-section.component.html',
+  styleUrls: ['./portfolio-section.css'],
 })
-export class CoffeeShopComponent implements OnInit {
+export class PortfolioSectionComponent implements OnInit {
   @Input() img: string = '';
   @Input() title: string = '';
   @Input() description: string = '';

@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CoffeeShopModule } from '../../components/coffee-shop/coffee-shop.module';
-
+import { FooterModule } from '../../components/footer/footer.module';
+import { PortfolioSectionModule } from '../../components/portfolio-section/portfolio-section.module';
 import { PortfolioComponent } from './portfolio.component';
 
 @NgModule({
   declarations: [PortfolioComponent],
-  imports: [CommonModule, CoffeeShopModule],
-  providers: [],
+  imports: [CommonModule, PortfolioSectionModule, FooterModule],
   exports: [PortfolioComponent],
 })
 export class PortfolioModule {}

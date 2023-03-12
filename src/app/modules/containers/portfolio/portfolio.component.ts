@@ -12,6 +12,5 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRoute = this.activeRoute.pathFromRoot[1].snapshot.url[1].path;
-    console.log(this.activedRoute);
   }
 }
