@@ -1,21 +1,41 @@
-<div class="container">
-  <app-coffee-shop
-    *ngIf="activedRoute === 'coffee-shop'"
-    [img]="'assets/img/coffee-shop-img.png'"
-    [title]="'Coffee Shop Website'"
-    [description]="
-      'A simple presentational website for a coffee shop. Considering this only as a basepoint, many features can be added according to  specific requirements.'
-    "
-    [link]="'Visit Template'"
-  ></app-coffee-shop>
-  <app-coffee-shop
-    *ngIf="activedRoute === 'barber-shop'"
-    [img]="'assets/img/barber-shop-img.png'"
-    [title]="'Barber Shop Website'"
-    [description]="
-      'A presentational website for a local barbershop which aims to make every client included into the community. This website  includes a homepage presenting a short description of the barber/s, special offers and reviews section. A portfolio page is included containing a gallery of images showcasing the barbers  work. Additionally, the prices and contact pages offers more information and simple steps in order to contact the barber/s.'
-    "
-    [link]="'Visit Template'"
-  ></app-coffee-shop>
-</div>
-<app-footer></app-footer>
+<ng-container *ngIf="!videoMode; else video">
+  <div class="container">
+    <app-coffee-shop
+      *ngIf="activedRoute === 'coffee-shop'"
+      [img]="'assets/img/coffee-shop-img.png'"
+      [title]="'Coffee Shop Website'"
+      [description]="
+        'A simple presentational website for a coffee shop. Considering this only as a basepoint, many features can be added according to  specific requirements.'
+      "
+      [link]="'Visit Template'"
+      (clickEvent)="handleVisitTemplate()"
+    ></app-coffee-shop>
+    <app-coffee-shop
+      *ngIf="activedRoute === 'barber-shop'"
+      [img]="'assets/img/barber-shop-img.png'"
+      [title]="'Barber Shop Website'"
+      [description]="
+        'A presentational website for a local barbershop which aims to make every client included into the community. This website  includes a homepage presenting a short description of the barber/s, special offers and reviews section. A portfolio page is included containing a gallery of images showcasing the barbers  work. Additionally, the prices and contact pages offers more information and simple steps in order to contact the barber/s.'
+      "
+      [link]="'Visit Template'"
+      (clickEvent)="handleVisitTemplate()"
+    ></app-coffee-shop>
+  </div>
+  <app-footer></app-footer>
+</ng-container>
+
+<ng-template #video class="video">
+  <video
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    data-setup="{}"
+  >
+    <source src="{{ videoSource }}" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+    </p>
+  </video>
+</ng-template>
